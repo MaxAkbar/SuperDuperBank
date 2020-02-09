@@ -73,7 +73,7 @@ namespace SuperDuperBank
                 int.TryParse(userDepositAmount, out var depositAmount);
 
                 // 3.1 then log the data into the user's file
-                File.AppendAllText($"{userName}.csv", $"{DateTime.Now},withdraw,{depositAmount},{userBalance + depositAmount}{Environment.NewLine}");
+                File.AppendAllText($"{userName}.csv", $"{DateTime.Now},deposit,{depositAmount},{userBalance + depositAmount}{Environment.NewLine}");
 
                 Console.WriteLine($"Thank you for your deposit. Your new balance is {userBalance + depositAmount}");
             }
